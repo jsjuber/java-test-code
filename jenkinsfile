@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('compile') { 
             steps {
-               sh 'ls -l' 
+               sh 'mvn --version' 
             }
         }
     }
