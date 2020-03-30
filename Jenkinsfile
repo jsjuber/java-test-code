@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('error') {
       agent {
         docker {
           image 'image'
