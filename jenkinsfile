@@ -17,7 +17,7 @@ pipeline {
           
        stage('Run'){
           steps{
-            sh 'mvn exec:java -Dexec.mainClass=com.javacodegeeks.quartz.QuartzSchedulerPropertiesExample'
+            sh 'nohup mvn exec:java -Dexec.mainClass=com.javacodegeeks.quartz.QuartzSchedulerPropertiesExample &'
             }
         }
     }
