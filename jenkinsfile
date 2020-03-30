@@ -1,10 +1,25 @@
 pipeline {
     agent any 
     stages {
-        stage('compile') { 
+        stage('Build') { 
             steps {
                sh 'mvn clean install -DskipTests' 
             }
         }
+        stage('Check-target') {
+           steps{
+              sh '''
+                  cd target
+                  ls -l
+                 '''
+                }
+          }
+          
+       stage('Run'){
+          steps{
+            sh 'java -jar camelHelloWorld-0.0.1-SNAPSHOT.jar'
+            }
+        }
     }
+    
 }
