@@ -2,12 +2,7 @@ pipeline {
   agent any
   stages {
     stage('error') {
-      agent {
-        docker {
-          image 'image'
-        }
-
-      }
+      agent any
       steps {
         echo 'hello'
       }
