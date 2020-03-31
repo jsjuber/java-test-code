@@ -1,17 +1,25 @@
 pipeline {
   agent {
     docker {
-      image 'nginx'
+      args '-p 80:80'
+      image ' juber786/nginx-test'
     }
 
   }
   stages {
-    stage('error') {
-      agent any
+    stage('check image') {
       steps {
-        sh '''#!/bin/bash
+        sh '''
+docker images'''
+      }
+    }
 
-docker run -dit --name webserver nginx:latest /bin/bash'''
+    stage('Build container') {
+      steps {
+        sh '''
+
+docker run -dit --name webserver juber786/nginx-test:latest
+'''
       }
     }
 
