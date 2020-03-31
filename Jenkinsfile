@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       args '-p 80:80'
-      image ' juber786/nginx-test'
+      image 'nginx:latest'
     }
 
   }
