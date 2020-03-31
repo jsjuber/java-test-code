@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'nginx'
+    }
+
+  }
   stages {
     stage('error') {
       agent any
