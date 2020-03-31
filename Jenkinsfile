@@ -7,10 +7,9 @@ pipeline {
 
   }
   stages {
-    stage('check image') {
+    stage('ok') {
       steps {
-        sh '''
-service nginx start'''
+        echo 'test ok'
       }
     }
 
