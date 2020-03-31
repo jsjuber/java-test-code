@@ -1,8 +1,9 @@
 pipeline {
   agent {
     docker {
-      args '-p 80:80'
       image 'nginx:latest'
+      args '''-p 80:80
+--name webserver'''
     }
 
   }
