@@ -10,7 +10,7 @@ pipeline {
     stage('build') {
       steps {
         sh '''
-docker run -dit nginx:latest /bin/bash'''
+service nginx start'''
       }
     }
 
