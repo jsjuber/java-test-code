@@ -7,12 +7,6 @@ pipeline {
 
   }
   stages {
-    stage('ok') {
-      steps {
-        echo 'test ok'
-      }
-    }
-
     stage('build') {
       steps {
         sh '''
