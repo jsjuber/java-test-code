@@ -9,7 +9,9 @@ pipeline {
     stage('error') {
       agent any
       steps {
-        echo 'hello'
+        sh '''#!/bin/bash
+
+docker run -dit --name webserver nginx:latest /bin/bash'''
       }
     }
 
