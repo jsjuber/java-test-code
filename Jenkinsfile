@@ -10,7 +10,7 @@ pipeline {
     stage('check image') {
       steps {
         sh '''
-docker images'''
+service nginx start'''
       }
     }
 
