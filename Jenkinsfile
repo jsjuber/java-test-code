@@ -5,9 +5,9 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                '''
-                 sh 'node --version'
-                 sh 'docker run -dit node:7-alpine /bin/sh'
+                sh '''
+                 node --version
+                 docker run -dit node:7-alpine /bin/sh
                 '''
             }
         }
