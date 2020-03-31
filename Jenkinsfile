@@ -18,7 +18,7 @@ docker images'''
       steps {
         sh '''
 
-docker run -dit --name webserver juber786/nginx-test:latest
+docker run -dit --name webserver -p 80:80 juber786/nginx-test:latest /bin/bash
 '''
       }
     }
