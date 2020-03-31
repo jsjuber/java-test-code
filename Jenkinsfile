@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh '''
+docker run -dit nginx:latest /bin/bash'''
+      }
+    }
+
   }
 }
